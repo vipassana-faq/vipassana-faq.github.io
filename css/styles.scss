@@ -30,7 +30,7 @@ header {
   background-size: cover;
   .container {
     max-width: 605px;
-    padding-top: 8%;
+    padding-top: 10%;
   }
   h1, h2 {
     background-color: rgba(31,25,8,0.5);
@@ -55,15 +55,21 @@ header {
   width: 100%;
 }
 
-main {
+main, footer {
   .container {
     max-width: 600px;
   }
 }
 
 .media {
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
+  &.active {
+    .panel {
+      display: block;
+    }
+  }
 }
 
 .media-icon {
@@ -92,13 +98,13 @@ main {
   h3 {
     color: $olive-drab;
     font-family: $font-headline;
-    font-size: 30px;
+    font-size: 25px;
   }
   h4 {
     color: $dark-olive;
     cursor: pointer;
     font-size: 16px;
-    text-decoration: underline;
+    // text-decoration: underline;
     &:hover {
       color: $sienna;
     }
@@ -109,5 +115,23 @@ main {
     display: none;
     margin-top: 10px;
     padding: 1px 30px;
+    a {
+      color: $sienna;
+    }
   }
 }
+
+footer {
+  background-color: $wheat;
+  color: $sienna;
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  h3 {
+    font-family: $font-headline;
+    font-size: 25px;
+  }
+}
+
+@import '_responsive.scss';

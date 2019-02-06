@@ -26,7 +26,7 @@ header {
 }
 header .container {
   max-width: 605px;
-  padding-top: 8%;
+  padding-top: 10%;
 }
 header h1, header h2 {
   background-color: rgba(31, 25, 8, 0.5);
@@ -50,13 +50,17 @@ header h2 {
   width: 100%;
 }
 
-main .container {
+main .container, footer .container {
   max-width: 600px;
 }
 
 .media {
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
+}
+.media.active .panel {
+  display: block;
 }
 
 .media-icon {
@@ -86,13 +90,12 @@ main .container {
 .media-body h3 {
   color: #868728;
   font-family: "Fjalla One", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 .media-body h4 {
   color: #22280e;
   cursor: pointer;
   font-size: 16px;
-  text-decoration: underline;
 }
 .media-body h4:hover {
   color: #763f2d;
@@ -103,6 +106,56 @@ main .container {
   display: none;
   margin-top: 10px;
   padding: 1px 30px;
+}
+.media-body .panel a {
+  color: #763f2d;
+}
+
+footer {
+  background-color: #f0cfa5;
+  color: #763f2d;
+}
+
+
+footer .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer h3 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 25px;
+}
+
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    height: 300px;
+  }
+  header .container {
+    max-width: 100%;
+  }
+  header h1, header h2 {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 80px;
+    padding-top: 20px;
+  }
+  header h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+
+  main .container, footer .container {
+    max-width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
